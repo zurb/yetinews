@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yeti News</title>
+    <link href="/assets/css/app.css" rel="stylesheet" type="text/css">
+    <script src="/assets/js/foundation.js"></script>
+    <script src="/assets/js/routes.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <style>
+      .menu-bar {margin-bottom: 0;}
+      .feeds {padding-top:1rem;}
+    </style>
+  </head>
+  <body>
+    <div class="grid-frame vertical">
+      <div class="grid-content shrink" style="padding: 0;">
+        <div class="primary title-bar">
+          <div class="center title">Yeti News</div>
+          <span zf-toggle="info" class="left hide-for-large"><a href="#">Info</a></span>
+        </div>
+      </div>
+      <div id="info" class="vertical medium-horizontal grid-block">
+        <div ng-class="['ui-animation']" ui-view class="grid-block medium-order-2">
+
+        </div>
+        <div class="grid-block shrink medium-order-1">
+          <ul class="medium-vertical icon-top medium-condense menu-bar dark">
+            <li ui-sref-active="is-active"><a ui-sref="designer-news"><img zf-iconic="" data-src="assets/img/iconic/person.svg"> Designer</a></li>
+            <li ui-sref-active="is-active"><a ui-sref="hacker-news"><img zf-iconic="" data-src="assets/img/iconic/cog.svg"> Hacker</a></li>
+            <li ui-sref-active="is-active"><a ui-sref="product-hunt"><img zf-iconic="" data-src="assets/img/iconic/star.svg"> Product</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

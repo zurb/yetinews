@@ -1,0 +1,10 @@
+@import "settings";
+@import "foundation";
+
+@include breakpoint(small-only) {
+	.menu-bar {width:100%;}
+}
+
+.primary.title-bar .title {
+	color: #fff; font-weight: 300; font-size: 1.4rem;
+}
